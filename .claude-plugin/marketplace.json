@@ -1,0 +1,32 @@
+{
+  "name": "brad-tools",
+  "owner": {
+    "name": "Brad Carter"
+  },
+  "metadata": {
+    "description": "Brad's personal Claude Code plugins",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "brad-personal",
+      "source": "./plugins/brad-personal",
+      "description": "My personal workflow helpers",
+      "hooks": [
+        {
+          "SessionStart": [
+            {
+              "matcher": "startup",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "${CLAUDE_PLUGIN_ROOT}/hooks/sync-humanlayer/sync.sh",
+                  "timeout": 30
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  }
