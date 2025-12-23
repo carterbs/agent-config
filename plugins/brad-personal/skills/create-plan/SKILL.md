@@ -1,46 +1,84 @@
 ---
-name: create_plan
-description: Create detailed implementation plans through interactive research and iteration. Use for significant features, refactors, multi-phase work, or when establishing clear success criteria and milestones before coding.
+name: create-plan
+description: >
+  Create detailed implementation plans with thorough research and iteration (no thoughts directory).
+  Use when:
+  (1) Starting a significant feature that will span multiple files/components,
+  (2) Planning a refactor that affects core architecture or multiple systems,
+  (3) Working on multi-phase projects that need clear milestones and gates,
+  (4) Establishing success criteria and testing strategy before writing code,
+  (5) Breaking down complex work that needs coordination across teams,
+  (6) Documenting approach for features with non-trivial technical decisions,
+  (7) Creating a roadmap for features with backwards compatibility concerns,
+  (8) Planning API changes, database migrations, or other breaking changes,
+  (9) Need to research existing patterns before proposing implementation,
+  (10) Project doesn't have a thoughts/ directory but needs structured planning.
+
+  Produces a comprehensive plan with current state analysis, phased implementation,
+  success criteria, and testing strategy.
 ---
 
-# Create Implementation Plan
+# Create Implementation Plan (Generic)
 
 ## Workflow
 
 ### 1. Understand the Requirement
+
 - Read all mentioned files completely (no partial reads)
-- Present informed understanding with file:line references
+- Present your informed understanding with specific file:line references
 - Ask focused questions only about what research couldn't clarify
+- Don't ask questions answerable through code exploration
 
-### 2. Research the Codebase
+### 2. Decompose and Plan Research
 
-Spawn parallel agents:
-- `codebase-locator` - Find relevant files/components
-- `codebase-analyzer` - Understand existing code
-- `codebase-pattern-finder` - Find similar implementations
-- `thoughts-locator` - Find related research/decisions
-- `thoughts-analyzer` - Extract insights from documents
+- Break task into composable research areas
+- Identify components, patterns, concepts to investigate
+- Use TodoWrite to track subtasks
+- Think deeply about underlying patterns and constraints
 
-Wait for ALL agents. Synthesize findings with file:line references.
+### 3. Spawn Parallel Sub-Agents
 
-### 3. Propose Plan Structure
+**Codebase Research:**
+- `codebase-locator` - Find WHERE files/components live
+- `codebase-analyzer` - Understand HOW existing code works
+- `codebase-pattern-finder` - Find similar implementations to learn from
 
-Present outline for approval. **Get user buy-in before writing the detailed plan.**
+**Agent Tips:**
+- Start with locator agents to find what exists
+- Use analyzer agents on promising findings
+- Run multiple agents in parallel
+- Tell agents what you're looking for, not how to search
+
+### 4. Wait and Synthesize
+
+Wait for ALL sub-agents, then:
+- Compile results, prioritize live codebase as source of truth
+- Include file paths and line numbers
+- Highlight patterns, connections, architectural decisions
+- Answer questions with concrete evidence
+
+### 5. Propose Plan Structure
+
+Present outline for approval:
 
 ```
 ## Overview
 [1-2 sentence summary]
 
 ## Implementation Phases:
-1. [Phase] - [What it accomplishes]
-2. [Phase] - [What it accomplishes]
+1. [Phase Name] - [What this accomplishes]
+2. [Phase Name] - [What this accomplishes]
+3. [Phase Name] - [What this accomplishes]
 ```
 
-### 4. Write the Plan
+Get explicit user buy-in before investing in detailed planning.
 
-Save to: `thoughts/shared/plans/YYYY-MM-DD-[ENG-XXXX]-description.md`
+### 6. Write the Plan
 
-Structure:
+Save to: `thoughts/shared/plans/YYYY-MM-DD-brief-description.md` (if thoughts/ exists)
+Or present inline if no thoughts directory.
+
+**Structure:**
 - **Overview** - Brief goal description
 - **Current State Analysis** - What exists (file:line refs), what's missing, constraints
 - **Desired End State** - What "done" looks like
@@ -48,41 +86,32 @@ Structure:
 - **What We're NOT Doing** - Out-of-scope items
 - **Implementation Approach** - High-level strategy
 
-For each phase:
-- Overview of what it accomplishes
-- Changes required (file paths + specific changes)
-- Success criteria (automated + manual)
-- "Pause here for confirmation before next phase"
+**Per phase:**
+- Overview, changes required (file + specifics), success criteria, confirmation gate
 
-End with:
-- **Testing Strategy** - Unit, integration, manual tests
-- **References** - Tickets, research docs, code refs
+**End with:**
+- **Testing Strategy** - Unit, integration, manual
+- **References** - Tickets, research, code refs
 
-### 5. Finalize
-- Run `humanlayer thoughts sync`
+### 7. Finalize
+
+- Run `humanlayer thoughts sync` (if applicable)
 - Present draft location to user
-- Iterate based on feedback
+- Iterate on feedback
 
 ## Success Criteria Format
 
-**Automated** (CI/CD):
-- Tests pass: `[command]`
-- Type check: `[command]`
-- Lint passes: `[command]`
-- Build succeeds: `[command]`
+**Automated**: Tests, type check, lint, build
 
-**Manual**:
-- Feature works as specified
-- Performance acceptable
-- Edge cases handled
+**Manual**: Feature works, performance acceptable, edge cases handled
 
 ## Key Principles
 
-- Include file:line references and measurable criteria
-- Break into phases with confirmation gates
-- Research patterns before proposing solutions
-- Consider backwards compatibility, migrations, dependencies
-- No open questions—research or ask first
+- File:line references and measurable criteria
+- Phases with confirmation gates
+- Research before proposing
+- Consider backwards compatibility
+- No open questions - research or ask first
 
 ## Common Implementation Patterns
 
