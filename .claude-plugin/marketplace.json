@@ -11,8 +11,7 @@
     {
       "name": "brad-personal",
       "source": "./plugins/brad-personal",
-      "description": "My personal workflow helpers",
-      "skills": "./skills"
+      "description": "My personal workflow helpers"
     }
   ]
 }
