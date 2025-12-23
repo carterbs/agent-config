@@ -12,7 +12,7 @@
       "name": "brad-personal",
       "source": "./plugins/brad-personal",
       "description": "My personal workflow helpers",
-      "skills": "./plugins/brad-personal/skills"
+      "skills": "./skills"
     }
   ]
 }
