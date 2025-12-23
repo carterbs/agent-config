@@ -12,21 +12,7 @@
       "name": "brad-personal",
       "source": "./plugins/brad-personal",
       "description": "My personal workflow helpers",
-      "hooks": [
-        {
-          "SessionStart": [
-            {
-              "matcher": "startup",
-              "hooks": [
-                {
-                  "type": "command",
-                  "command": "${CLAUDE_PLUGIN_ROOT}/hooks/sync-humanlayer/sync.sh",
-                  "timeout": 30
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    ]
-  }
+      "skills": "./plugins/brad-personal/skills"
+    }
+  ]
+}
