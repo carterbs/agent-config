@@ -1,16 +1,6 @@
 ---
 name: validate-plan
-description: >
-  Validate implementation against plan, verify success criteria are met, and identify gaps.
-  Use when:
-  (1) You've completed an implementation phase and need to verify it matches the documented plan,
-  (2) You want to confirm all success criteria from the plan are satisfied before moving forward,
-  (3) You need to identify gaps, missing functionality, or deviations from the planned approach,
-  (4) You're at a checkpoint and want to ensure quality before committing or creating a PR,
-  (5) You need to generate a structured validation report documenting compliance with the plan,
-  (6) You want to catch issues early by comparing actual implementation against planned specs,
-  (7) Someone requests validation of work against its original design/plan,
-  (8) You're resuming work and need to verify current state matches the plan before continuing.
+description: Validate implementation against plan, verify success criteria are met, and identify gaps. Use when completing an implementation phase and need verification, confirming success criteria are satisfied, identifying gaps or deviations from planned approach, at a checkpoint before committing or creating a PR, generating validation reports, or catching issues by comparing implementation against specs.
 ---
 
 # Validate Implementation Against Plan

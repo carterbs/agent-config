@@ -1,15 +1,6 @@
 ---
 name: resume-handoff
-description: >
-  Resume work from a handoff document by analyzing context, validating current state,
-  and establishing continuity. Use when:
-  (1) Continuing work from a previous session that was documented with a handoff,
-  (2) Picking up where another developer or AI agent left off after they created a handoff,
-  (3) Resuming work after a break when a handoff document exists in thoughts/shared/handoffs/,
-  (4) Starting work on a ticket that has existing handoff documentation,
-  (5) Recovering context after a conversation was interrupted or timed out,
-  (6) Switching between different features/branches that have handoff documentation,
-  (7) Onboarding to existing work where previous context was captured in a handoff.
+description: Resume work from a handoff document by analyzing context, validating current state, and establishing continuity. Use when continuing work from a previous session with a handoff, picking up where another developer left off, resuming after a break when handoff exists in thoughts/shared/handoffs/, recovering context after interruption, or onboarding to existing work with handoff documentation.
 ---
 
 # Resume Handoff

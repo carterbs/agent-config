@@ -1,14 +1,6 @@
 ---
 name: implement-plan
-description: >
-  Implement technical plans from thoughts/shared/plans with verification.
-  Use when:
-  (1) You have a completed implementation plan ready to code and want to execute it systematically,
-  (2) Executing multi-phase implementations that need methodical verification at each milestone,
-  (3) Need to track progress against documented success criteria and ensure nothing is missed,
-  (4) Working on complex features that benefit from structured phase-by-phase execution,
-  (5) Want automated verification between phases to catch issues early,
-  (6) Implementing features where the plan includes specific file:line references and testing procedures.
+description: Implement technical plans from thoughts/shared/plans with verification. Use when you have a completed implementation plan ready to execute systematically, executing multi-phase implementations with methodical verification, tracking progress against success criteria, working on complex features with phase-by-phase execution, or implementing features with specific file:line references and testing procedures.
 ---
 
 # Implement Technical Plan

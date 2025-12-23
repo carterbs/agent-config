@@ -1,21 +1,6 @@
 ---
 name: create-plan
-description: >
-  Create detailed implementation plans with thorough research and iteration (no thoughts directory).
-  Use when:
-  (1) Starting a significant feature that will span multiple files/components,
-  (2) Planning a refactor that affects core architecture or multiple systems,
-  (3) Working on multi-phase projects that need clear milestones and gates,
-  (4) Establishing success criteria and testing strategy before writing code,
-  (5) Breaking down complex work that needs coordination across teams,
-  (6) Documenting approach for features with non-trivial technical decisions,
-  (7) Creating a roadmap for features with backwards compatibility concerns,
-  (8) Planning API changes, database migrations, or other breaking changes,
-  (9) Need to research existing patterns before proposing implementation,
-  (10) Project doesn't have a thoughts/ directory but needs structured planning.
-
-  Produces a comprehensive plan with current state analysis, phased implementation,
-  success criteria, and testing strategy.
+description: Create detailed implementation plans with thorough research and iteration. Use when starting significant features spanning multiple files, planning refactors affecting architecture, working on multi-phase projects with milestones, establishing success criteria before coding, breaking down complex work, or documenting approach for non-trivial technical decisions.
 ---
 
 # Create Implementation Plan (Generic)

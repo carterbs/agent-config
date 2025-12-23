@@ -1,14 +1,6 @@
 ---
 name: research-codebase
-description: >
-  Research codebase comprehensively using parallel sub-agents. Use when:
-  (1) User explicitly asks to "research", "investigate", "explore", or "understand" the codebase.
-  (2) Understanding architecture, system design, or how components interact,
-  (3) Documenting existing patterns, conventions, or business logic,
-  (4) Investigating how a feature works end-to-end,
-  (5) Answering "how does X work?" or "where is Y implemented?" questions,
-  (6) Preparing context before implementing a significant change,
-  (7) Exploring unfamiliar code or onboarding to a new area,
+description: Research codebase comprehensively using parallel sub-agents. Use when user asks to "research", "investigate", "explore", or "understand" the codebase, understanding architecture or system design, documenting patterns or conventions, investigating how features work end-to-end, answering "how does X work?" or "where is Y implemented?" questions, preparing context before implementing changes, or exploring unfamiliar code.
 ---
 
 # Research Codebase

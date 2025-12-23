@@ -1,17 +1,6 @@
 ---
 name: iterate-plan
-description: >
-  Iterate on existing implementation plans with thorough research and updates.
-  Use when:
-  (1) Plan feedback or review identified issues that need addressing,
-  (2) New information emerged during implementation (discovered complexity, API changes),
-  (3) Requirements shifted after initial planning (scope additions, priority changes),
-  (4) Implementation revealed incorrect assumptions in the original plan,
-  (5) Need to incorporate learnings from a completed phase into remaining phases,
-  (6) User explicitly requests plan updates, revisions, or improvements,
-  (7) Codebase changes (refactors, library upgrades) make parts of the plan outdated.
-
-  For major scope changes or complete rewrites, use `create-plan` instead.
+description: Iterate on existing implementation plans with thorough research and updates. Use when plan feedback identified issues, new information emerged during implementation, requirements shifted after planning, implementation revealed incorrect assumptions, need to incorporate learnings from completed phases, user requests plan updates or revisions, or codebase changes made parts of the plan outdated.
 ---
 
 # Iterate on Implementation Plan

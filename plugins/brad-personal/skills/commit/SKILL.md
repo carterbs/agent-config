@@ -1,14 +1,6 @@
 ---
 name: commit
-description: >
-  Create git commits with user approval and no Claude attribution. NEVER adds co-author
-  information or Claude attribution—commits appear as if the user wrote them. Use when:
-  (1) User explicitly asks to commit changes (e.g., "commit this", "make a commit"),
-  (2) User asks to save work to git (e.g., "save this work", "save these changes"),
-  (3) User uses the word "commit" in the context of version control,
-  (4) User says to "wrap up" or "finish" after completing a feature or fix,
-  (5) After completing work and user asks "what's next?" or "are we done?",
-  (6) User mentions staging changes or creating a commit message.
+description: Create git commits with user approval and no Claude attribution. NEVER adds co-author information—commits appear as if user wrote them. Use when user asks to "commit", "make a commit", save work to git, says "wrap up" or "finish" after completing work, asks "what's next?" or "are we done?" after coding, or mentions staging changes or commit messages.
 ---
 
 # Commit Changes
