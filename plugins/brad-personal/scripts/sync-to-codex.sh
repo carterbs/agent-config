@@ -7,14 +7,20 @@ SKILLS_TARGET="$HOME/.codex/skills"
 COMMANDS_SOURCE="$SCRIPT_DIR/../commands"
 PROMPTS_TARGET="$HOME/.codex/prompts"
 
-# Sync skills
+# Sync skills (copy entire tree, including hidden entries)
 mkdir -p "$SKILLS_TARGET"
-for skill in "$SKILLS_SOURCE"/*/; do
-    name=$(basename "$skill")
-    [[ "$name" == ".claude" ]] && continue
-    cp -r "$skill" "$SKILLS_TARGET/"
-done
+rsync -a "$SKILLS_SOURCE"/ "$SKILLS_TARGET"/
 echo "Synced skills to $SKILLS_TARGET"
+
+# Show optional cleanup for skills not in source
+extras=$(rsync -a --delete --dry-run --itemize-changes "$SKILLS_SOURCE"/ "$SKILLS_TARGET"/ \
+    | awk '/^(\\*deleting |deleting )/ {print $2}')
+if [[ -n "$extras" ]]; then
+    echo "Extra items in $SKILLS_TARGET not in source (optional removal):"
+    while IFS= read -r path; do
+        [[ -n "$path" ]] && echo "rm -rf \"$SKILLS_TARGET/$path\""
+    done <<< "$extras"
+fi
 
 # Sync commands -> prompts (flat .md files)
 if ls "$COMMANDS_SOURCE"/*.md &>/dev/null; then
