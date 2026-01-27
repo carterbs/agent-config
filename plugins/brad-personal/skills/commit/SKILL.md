@@ -1,6 +1,6 @@
 ---
 name: commit
-description: Create git commits with user approval and no Claude attribution. NEVER adds co-author information—commits appear as if user wrote them. Use when user asks to "commit", "make a commit", save work to git, says "wrap up" or "finish" after completing work, asks "what's next?" or "are we done?" after coding, or mentions staging changes or commit messages.
+description: Create git commits with no Claude attribution. NEVER adds co-author information—commits appear as if user wrote them. Use when user asks to "commit", "make a commit", save work to git, says "wrap up" or "finish" after completing work, asks "what's next?" or "are we done?" after coding, or mentions staging changes or commit messages.
 ---
 
 # Commit Changes
@@ -24,28 +24,7 @@ Create clean, professional git commits that appear as if the user wrote them dir
 - If multiple unrelated changes exist, plan separate commits for each
 - Follow conventional commit format if the project uses it (check recent git log)
 
-### 3. Present Plan to User
-Present a clear, structured plan showing:
-- Number of commits planned
-- For each commit:
-  - Files to be included
-  - Proposed commit message
-  - Brief rationale if not obvious
-
-Ask for explicit confirmation:
-```
-I plan to create [N] commit(s):
-
-Commit 1: [message]
-Files: [list]
-
-Commit 2: [message]
-Files: [list]
-
-Proceed with these commits?
-```
-
-### 4. Execute on Confirmation
+### 3. Execute Commits
 - Use `git add` with specific file paths (NEVER use `-A`, `.`, or `--all`)
 - Create each commit with the planned message
 - After all commits, show results with `git log --oneline -n [number]`
@@ -67,15 +46,14 @@ Proceed with these commits?
 - Keep commits atomic - one logical change per commit
 - Review conversation context fully before planning commits
 
-**User Interaction Rules:**
-- Always get explicit user approval before executing commits
-- Present clear plan showing files and messages for each commit
-- If user's work involves multiple unrelated changes, recommend splitting into multiple commits
-- If uncertain about commit organization, ask the user for preferences
+**Execution Rules:**
+- Execute commits immediately without asking for permission
+- Briefly inform the user what commits were created after completion
+- Split unrelated changes into multiple atomic commits automatically
+- Use best judgment for commit organization based on change context
 
 ## Sub-Agent Recommendations
 
 This skill does NOT require sub-agents. Execute directly because:
 - Commits require conversation context that sub-agents don't have access to
-- User confirmation workflow is interactive and needs main agent control
 - Git operations are straightforward and don't require specialized reasoning
