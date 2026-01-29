@@ -1,7 +1,7 @@
 {
   "name": "brad-personal",
   "description": "My personal Claude Code workflow helpers",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "author": { "name": "Brad Carter" },
   "skills": "./skills/"
 }
